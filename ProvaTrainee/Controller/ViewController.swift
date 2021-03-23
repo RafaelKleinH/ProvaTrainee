@@ -7,13 +7,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tfFirstValue: UITextField!
     @IBOutlet weak var tfSecondValue: UITextField!
+
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    
     
     @IBAction func btResult(_ sender: Any) {
         
         getResult()
     }
     
+    
     @IBOutlet weak var lbResult: UILabel!
+    
+    func loadDisappear(){
+        loadingView.isHidden = true
+        loading.stopAnimating()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +59,7 @@ class ViewController: UIViewController {
                    let two = self.numbers.last?.myArray.last{
                     
                     DispatchQueue.main.async {
+                        self.loadDisappear()
                         self.tfFirstValue.text = "\(one)"
                         self.tfSecondValue.text = "\(two)"
                     }

@@ -73,17 +73,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVB-nS-7wc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="bN2-x9-ICO">
+                                        <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                        <color key="color" red="0.9571917808" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84896725171232879" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bN2-x9-ICO" firstAttribute="centerX" secondItem="aVB-nS-7wc" secondAttribute="centerX" id="phR-mL-Dxh"/>
+                                    <constraint firstItem="bN2-x9-ICO" firstAttribute="centerY" secondItem="aVB-nS-7wc" secondAttribute="centerY" id="xtG-gc-TkG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="Qtc-uf-Mka" firstAttribute="top" secondItem="f0m-R1-NdI" secondAttribute="bottom" constant="32" id="0bd-LO-Ptd"/>
                             <constraint firstItem="evH-Zn-Leb" firstAttribute="top" secondItem="Qtc-uf-Mka" secondAttribute="bottom" constant="36" id="6dT-Rj-1Vs"/>
+                            <constraint firstItem="aVB-nS-7wc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dg6-2N-8cM"/>
                             <constraint firstItem="f0m-R1-NdI" firstAttribute="top" secondItem="MqC-dO-3aG" secondAttribute="bottom" constant="32" id="GqW-wS-itO"/>
+                            <constraint firstItem="aVB-nS-7wc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JVO-fK-ejm"/>
                             <constraint firstItem="c7v-rY-inp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M7Q-6Q-eEZ"/>
                             <constraint firstItem="evH-Zn-Leb" firstAttribute="leading" secondItem="MqC-dO-3aG" secondAttribute="leading" id="RR3-jk-dkV"/>
                             <constraint firstItem="hxV-jb-Lfs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="Wjr-8R-hqt"/>
                             <constraint firstItem="f0m-R1-NdI" firstAttribute="centerX" secondItem="MqC-dO-3aG" secondAttribute="centerX" id="YUh-39-kr4"/>
+                            <constraint firstAttribute="bottom" secondItem="aVB-nS-7wc" secondAttribute="bottom" id="Znz-F5-CU7"/>
+                            <constraint firstAttribute="trailing" secondItem="aVB-nS-7wc" secondAttribute="trailing" id="a7i-OX-6RG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c7v-rY-inp" secondAttribute="bottom" constant="18" id="aYT-gb-KqG"/>
                             <constraint firstItem="Qtc-uf-Mka" firstAttribute="centerX" secondItem="f0m-R1-NdI" secondAttribute="centerX" id="dLN-mb-34a"/>
                             <constraint firstItem="c7v-rY-inp" firstAttribute="top" secondItem="hxV-jb-Lfs" secondAttribute="bottom" constant="48" id="ePm-9U-NuM"/>
@@ -100,6 +118,8 @@
                     </view>
                     <connections>
                         <outlet property="lbResult" destination="c7v-rY-inp" id="MyC-GN-77S"/>
+                        <outlet property="loading" destination="bN2-x9-ICO" id="YcU-kl-MZa"/>
+                        <outlet property="loadingView" destination="aVB-nS-7wc" id="wae-mP-H1Q"/>
                         <outlet property="tfFirstValue" destination="MqC-dO-3aG" id="Nua-wV-ZT8"/>
                         <outlet property="tfSecondValue" destination="evH-Zn-Leb" id="15R-gU-wcd"/>
                     </connections>
